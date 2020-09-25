@@ -1,3 +1,5 @@
+# ghcr.io/kontsevoye/collabatube:latest
+
 FROM hyperf/hyperf:7.4-alpine-v3.11-cli
 LABEL maintainer="Evgeny Kontsevoy <instane@ya.ru>" \
     version="1.0" \

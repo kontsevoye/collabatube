@@ -1,0 +1,7 @@
+.github/
+.git/
+.idea/
+runtime/
+vendor/
+.dockerignore
+.env
