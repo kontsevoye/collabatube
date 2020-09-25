@@ -1,20 +1,17 @@
-# Default Dockerfile
-#
-# @link     https://www.hyperf.io
-# @document https://hyperf.wiki
-# @contact  group@hyperf.io
-# @license  https://github.com/hyperf-cloud/hyperf/blob/master/LICENSE
-
 FROM hyperf/hyperf:7.4-alpine-v3.11-cli
-LABEL maintainer="Hyperf Developers <group@hyperf.io>" version="1.0" license="MIT" app.name="Hyperf"
+LABEL maintainer="Evgeny Kontsevoy <instane@ya.ru>" \
+    version="1.0" \
+    license="MIT" \
+    app.name="Collabatube" \
+    org.opencontainers.image.source="https://github.com/kontsevoye/collabatube"
 
 ##
 # ---------- env settings ----------
 ##
-# --build-arg timezone=Asia/Shanghai
+# --build-arg timezone=Europe/Moscow
 ARG timezone
 
-ENV TIMEZONE=${timezone:-"Asia/Shanghai"} \
+ENV TIMEZONE=${timezone:-"Europe/Moscow"} \
     COMPOSER_VERSION=1.10.10 \
     APP_ENV=prod \
     SCAN_CACHEABLE=(true)
