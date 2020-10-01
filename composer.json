@@ -24,7 +24,8 @@
         "hyperf/logger": "~2.0.0",
         "hyperf/memory": "~2.0.0",
         "hyperf/process": "~2.0.0",
-        "hyperf/socketio-server": "^2.0"
+        "hyperf/socketio-server": "^2.0",
+        "hyperf/db-connection": "^2.0"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5",

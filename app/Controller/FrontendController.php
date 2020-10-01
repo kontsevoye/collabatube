@@ -7,6 +7,8 @@ namespace App\Controller;
 use Hyperf\Config\Annotation\Value;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\RequestMapping;
+use Hyperf\HttpServer\Contract\ResponseInterface;
+use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 
 /**
  * @Controller
@@ -21,7 +23,7 @@ class FrontendController extends AbstractController
     /**
      * @RequestMapping(path="/ws-poc", methods="get")
      */
-    public function POC()
+    public function POC(ResponseInterface $response): PsrResponseInterface
     {
         $data = <<<EOF
 <!DOCTYPE html>
@@ -40,8 +42,7 @@ class FrontendController extends AbstractController
 </script>
 </html>
 EOF;
-        return $this
-            ->response
+        return $response
             ->raw($data)
             ->withStatus(200)
             ->withHeader('content-type', 'text/html; charset=utf-8');

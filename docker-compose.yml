@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  hyperf:
+    build: .
+    ports:
+      - "${DOCKER_HTTP_HOST_PORT}:9501"
+      - "${DOCKER_WS_HOST_PORT}:9502"
+    volumes:
+      - .:/opt/www
+    networks:
+      - cnet
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "${DOCKER_REDIS_HOST_PORT}:3306"
+    networks:
+      - cnet
+  mysql:
+    image: mysql:8
+    ports:
+      - "${DOCKER_MYSQL_HOST_PORT}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: t00r
+      MYSQL_DATABASE: collabatube
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - cnet
+
+networks:
+  cnet:
+    name: cnet
+    external: false
+
+volumes:
+  mysql-data:
+    name: cmysql-data
