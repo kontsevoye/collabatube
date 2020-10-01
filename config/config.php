@@ -9,6 +9,7 @@ return [
     'app_name' => env('APP_NAME', 'skeleton'),
     'app_env' => env('APP_ENV', 'dev'),
     'scan_cacheable' => env('SCAN_CACHEABLE', false),
+    'socketio_server_url' => env('SOCKETIO_SERVER_URL', 'ws://127.0.0.1:9502'),
     StdoutLoggerInterface::class => [
         'log_level' => [
             LogLevel::ALERT,

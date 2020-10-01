@@ -19,14 +19,12 @@
         "hyperf/cache": "~2.0.0",
         "hyperf/command": "~2.0.0",
         "hyperf/config": "~2.0.0",
-        "hyperf/db-connection": "~2.0.0",
         "hyperf/framework": "~2.0.0",
-        "hyperf/guzzle": "~2.0.0",
         "hyperf/http-server": "~2.0.0",
         "hyperf/logger": "~2.0.0",
         "hyperf/memory": "~2.0.0",
         "hyperf/process": "~2.0.0",
-        "hyperf/redis": "~2.0.0"
+        "hyperf/socketio-server": "^2.0"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5",
