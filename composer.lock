@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e9b769318b6a272d7330ad8025f835e",
+    "content-hash": "f7a4cfc61b603f54402934091df96c3e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -364,6 +364,206 @@
                 "response"
             ],
             "time": "2020-02-05T20:36:27+00:00"
+        },
+        {
+            "name": "hyperf-ext/auth",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf-ext/auth.git",
+                "reference": "2e1cfd29a0590f2b48e5e6043acc42c39c80f652"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf-ext/auth/zipball/2e1cfd29a0590f2b48e5e6043acc42c39c80f652",
+                "reference": "2e1cfd29a0590f2b48e5e6043acc42c39c80f652",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": ">=4.5",
+                "hyperf-ext/hashing": "^2.0",
+                "hyperf/command": "^2.0",
+                "hyperf/config": "^2.0",
+                "hyperf/database": "^2.0",
+                "hyperf/db-connection": "^2.0",
+                "hyperf/di": "^2.0",
+                "hyperf/framework": "^2.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "hyperf/testing": "^2.0",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "swoole/ide-helper": "dev-master"
+            },
+            "suggest": {
+                "hyperf-ext/cookie": "Required to use session guard.",
+                "hyperf-ext/jwt": "Required to use JWT guard.",
+                "hyperf/session": "Required to use session guard."
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "HyperfExt\\Auth\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HyperfExt\\Auth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Zhu",
+                    "email": "eric@zhu.email"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Hyperf Auth package.",
+            "keywords": [
+                "auth",
+                "hyperf",
+                "php"
+            ],
+            "time": "2020-09-12T22:34:28+00:00"
+        },
+        {
+            "name": "hyperf-ext/hashing",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf-ext/hashing.git",
+                "reference": "9247a1666119645ac3d97fc67d5ec936c813fffb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf-ext/hashing/zipball/9247a1666119645ac3d97fc67d5ec936c813fffb",
+                "reference": "9247a1666119645ac3d97fc67d5ec936c813fffb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": ">=4.5",
+                "hyperf/config": "^2.0",
+                "hyperf/di": "^2.0",
+                "hyperf/framework": "^2.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "hyperf/testing": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "swoole/ide-helper": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "HyperfExt\\Hashing\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HyperfExt\\Hashing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Zhu",
+                    "email": "eric@zhu.email"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Hyperf Hashing package.",
+            "keywords": [
+                "hashing",
+                "hyperf",
+                "php"
+            ],
+            "time": "2020-09-05T13:26:27+00:00"
+        },
+        {
+            "name": "hyperf-ext/jwt",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf-ext/jwt.git",
+                "reference": "914075fc30d7753c29d28ba391655dab0bfb5eae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf-ext/jwt/zipball/914075fc30d7753c29d28ba391655dab0bfb5eae",
+                "reference": "914075fc30d7753c29d28ba391655dab0bfb5eae",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "ext-swoole": ">=4.5",
+                "hyperf/cache": "^2.0",
+                "hyperf/command": "^2.0",
+                "hyperf/config": "^2.0",
+                "hyperf/di": "^2.0",
+                "hyperf/framework": "^2.0",
+                "lcobucci/jwt": "^3.2",
+                "nesbot/carbon": "^2.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "hyperf/testing": "^2.0",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "swoole/ide-helper": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "HyperfExt\\Jwt\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HyperfExt\\Jwt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Zhu",
+                    "email": "eric@zhu.email"
+                },
+                {
+                    "name": "Sean Tymon",
+                    "email": "tymon148@gmail.com",
+                    "homepage": "https://tymon.xyz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The Hyperf JWT package.",
+            "keywords": [
+                "auth",
+                "hyperf",
+                "jwt",
+                "php"
+            ],
+            "time": "2020-09-12T22:18:09+00:00"
         },
         {
             "name": "hyperf/cache",
@@ -1977,6 +2177,71 @@
                 }
             ],
             "time": "2020-09-14T14:23:00+00:00"
+        },
+        {
+            "name": "lcobucci/jwt",
+            "version": "3.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lcobucci/jwt.git",
+                "reference": "c1123697f6a2ec29162b82f170dd4a491f524773"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/c1123697f6a2ec29162b82f170dd4a491f524773",
+                "reference": "c1123697f6a2ec29162b82f170dd4a491f524773",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1.5",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/php-invoker": "~1.1",
+                "phpunit/phpunit": "^5.7 || ^7.3",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lcobucci\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Luís Otávio Cobucci Oblonczyk",
+                    "email": "lcobucci@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+            "keywords": [
+                "JWS",
+                "jwt"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/lcobucci",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/lcobucci",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-08-20T13:22:28+00:00"
         },
         {
             "name": "mix/concurrent",

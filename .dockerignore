@@ -5,3 +5,5 @@ runtime/
 vendor/
 .dockerignore
 .env
+http-client.env.json
+requests.http
