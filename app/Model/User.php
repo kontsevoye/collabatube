@@ -6,6 +6,7 @@ namespace App\Model;
 
 use Carbon\Carbon;
 use Hyperf\Database\Model\Concerns\HasTimestamps;
+use Hyperf\Database\Model\Relations\HasMany;
 use Hyperf\DbConnection\Model\Model;
 use HyperfExt\Auth\Authenticatable;
 use HyperfExt\Auth\Contracts\AuthenticatableInterface;
@@ -91,5 +92,10 @@ class User extends Model implements AuthenticatableInterface, JwtSubjectInterfac
     public function getJwtCustomClaims(): array
     {
         return [];
+    }
+
+    public function socialAccounts(): HasMany
+    {
+        return $this->hasMany(SocialAccount::class);
     }
 }

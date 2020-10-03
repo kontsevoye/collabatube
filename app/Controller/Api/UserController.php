@@ -6,27 +6,27 @@ namespace App\Controller\Api;
 
 use App\Controller\AbstractController;
 use App\Middleware\ApiAuthenticateMiddleware;
+use App\Model\User;
 use Hyperf\HttpMessage\Exception\UnauthorizedHttpException;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\Middleware;
 use Hyperf\HttpServer\Annotation\RequestMapping;
 use Hyperf\HttpServer\Contract\ResponseInterface;
-use HyperfExt\Auth\Contracts\AuthenticatableInterface;
 use HyperfExt\Auth\Contracts\AuthManagerInterface;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 
 /**
- * @Controller(prefix="/api/v1")
+ * @Controller(prefix="/api/v1/user")
  * @Middleware(ApiAuthenticateMiddleware::class)
  */
-class ApiController extends AbstractController
+class UserController extends AbstractController
 {
-    private AuthenticatableInterface $user;
+    private User $user;
 
     public function __construct(AuthManagerInterface $authManager)
     {
         $user = $authManager->guard()->user();
-        if ($user === null) {
+        if (!($user instanceof User)) {
             throw new UnauthorizedHttpException();
         }
 
@@ -34,12 +34,12 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @RequestMapping(path="hello", methods="get")
+     * @RequestMapping(path="me", methods="get")
      */
     public function hello(ResponseInterface $response): PsrResponseInterface
     {
         return $response
-            ->json(['userId' => $this->user->getAuthIdentifier()])
+            ->json(['user' => $this->user->toArray()])
             ->withStatus(200);
     }
 }

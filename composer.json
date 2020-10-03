@@ -16,6 +16,7 @@
     "require": {
         "php": ">=7.4",
         "ext-swoole": ">=4.5",
+        "ext-json": "*",
         "hyperf/cache": "~2.0.0",
         "hyperf/command": "~2.0.0",
         "hyperf/config": "~2.0.0",
@@ -27,7 +28,8 @@
         "hyperf/socketio-server": "^2.0",
         "hyperf/db-connection": "^2.0",
         "hyperf-ext/auth": "^2.0",
-        "hyperf-ext/jwt": "^2.0"
+        "hyperf-ext/jwt": "^2.0",
+        "hyperf/guzzle": "^2.0"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5",
