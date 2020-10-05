@@ -29,7 +29,13 @@
         "hyperf/db-connection": "^2.0",
         "hyperf-ext/auth": "^2.0",
         "hyperf-ext/jwt": "^2.0",
-        "hyperf/guzzle": "^2.0"
+        "hyperf/guzzle": "^2.0",
+        "symfony/serializer": "^5.1",
+        "symfony/property-access": "^5.1",
+        "symfony/validator": "^5.1",
+        "doctrine/annotations": "^1.10",
+        "doctrine/cache": "^1.10",
+        "symfony/cache": "^5.1"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5",

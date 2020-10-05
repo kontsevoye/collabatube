@@ -30,9 +30,6 @@ abstract class AbstractProvider implements ProviderInterface
      */
     abstract public function getProviderName(): string;
 
-    /**
-     * @return string
-     */
     public function getAccessTokenFieldName(): string
     {
         return 'access_token';
@@ -87,8 +84,5 @@ abstract class AbstractProvider implements ProviderInterface
         return $this->getAccessTokenInstance()->loadAccessToken($token);
     }
 
-    /**
-     * @return AccessTokenInterface
-     */
     abstract protected function getAccessTokenInstance(): AccessTokenInterface;
 }
