@@ -26,7 +26,7 @@ class UserController extends AbstractController
     public function __construct(AuthManagerInterface $authManager)
     {
         $user = $authManager->guard()->user();
-        if (!($user instanceof User)) {
+        if (! ($user instanceof User)) {
             throw new UnauthorizedHttpException();
         }
 

@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Model\SocialAccount;
-use Hyperf\Database\Schema\Schema;
-use Hyperf\Database\Schema\Blueprint;
 use Hyperf\Database\Migrations\Migration;
+use Hyperf\Database\Schema\Blueprint;
+use Hyperf\Database\Schema\Schema;
 
 class CreateSocialAccount extends Migration
 {

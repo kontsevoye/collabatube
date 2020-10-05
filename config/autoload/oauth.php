@@ -1,6 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 return [
+    'exchange_timeout' => env('OAUTH_EXCHANGE_TIMEOUT', 10),
+    'resource_owner_fetch_timeout' => env('OAUTH_RESOURCE_OWNER_FETCH_TIMEOUT', 10),
     'providers' => [
         'github' => [
             'authorize_url' => 'https://github.com/login/oauth/authorize',

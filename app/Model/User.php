@@ -15,11 +15,11 @@ use HyperfExt\Jwt\Contracts\JwtSubjectInterface;
 /**
  * @method static User|null find(int $id)
  * @method static User findOrFail(int $id)
- * @property int|null id
- * @property string|null password
- * @property string|null remember_token
- * @property Carbon|null created_at
- * @property Carbon|null updated_at
+ * @property null|int id
+ * @property null|string password
+ * @property null|string remember_token
+ * @property null|Carbon created_at
+ * @property null|Carbon updated_at
  */
 class User extends Model implements AuthenticatableInterface, JwtSubjectInterface
 {

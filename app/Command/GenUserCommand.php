@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Command;
 
 use App\Model\User;
-use Hyperf\Command\Command as HyperfCommand;
 use Hyperf\Command\Annotation\Command;
+use Hyperf\Command\Command as HyperfCommand;
 use HyperfExt\Hashing\Contract\HashInterface;
 use Symfony\Component\Console\Input\InputOption;
 

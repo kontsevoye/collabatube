@@ -39,7 +39,7 @@ class ApiAuthenticateMiddleware extends AbstractAuthenticateMiddleware
     protected function guards(): array
     {
         return [
-            'api'
+            'api',
         ];
     }
 }

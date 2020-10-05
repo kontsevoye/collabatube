@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace App\Model;
 
@@ -11,18 +11,19 @@ use Hyperf\DbConnection\Model\Model;
 /**
  * @method static SocialAccount|null find(int $id)
  * @method static SocialAccount findOrFail(int $id)
- * @property int|null id
- * @property int|null user_id
- * @property int|null type
- * @property string|null social_id
- * @property string|null email
- * @property string|null avatar_url
- * @property Carbon|null created_at
- * @property Carbon|null updated_at
+ * @property null|int id
+ * @property null|int user_id
+ * @property null|int type
+ * @property null|string social_id
+ * @property null|string email
+ * @property null|string avatar_url
+ * @property null|Carbon created_at
+ * @property null|Carbon updated_at
  */
 class SocialAccount extends Model
 {
     public const TYPE_GITHUB = 1;
+
     public const TYPE_GOOGLE = 2;
 
     public const TYPES = [
@@ -36,12 +37,14 @@ class SocialAccount extends Model
      * @var string
      */
     protected $table = 'social_account';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [];
+
     /**
      * The attributes that should be cast to native types.
      *
