@@ -19,6 +19,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
+      - name: Set tag name
+        id: vars
+        run: echo ::set-output name=short_ref::${GITHUB_REF#refs/*/}
+      - name: Set safe tag name
+        env:
+          SHORT_REF: ${{ steps.vars.outputs.short_ref }}
+        id: safe_vars
+        run: echo ::set-output name=short_ref::${SHORT_REF//\//\-}
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
@@ -28,7 +36,7 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.ref }}
+            ghcr.io/${{ github.repository }}:${{ steps.safe_vars.outputs.short_ref }}
   deploy:
     needs: build
     runs-on: ubuntu-latest
