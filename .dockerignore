@@ -1,10 +1,15 @@
 .github/
+.helm/
 .git/
 .idea/
 runtime/
 vendor/
 .dockerignore
+.gitignore
 .env
+.phpstorm.meta.php
+docker-compose.yml
+Dockerfile
 http-client.env.json
 http-client.private.env.json
 requests.http

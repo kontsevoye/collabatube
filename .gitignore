@@ -13,3 +13,7 @@ vendor/
 http-client.env.json
 http-client.private.env.json
 requests.http
+.helm/charts/*
+.helm/Chart.lock
+!.helm/charts/.gitkeep
+.helm/values-production.yaml

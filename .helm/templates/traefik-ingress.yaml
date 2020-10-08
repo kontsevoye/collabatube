@@ -1,0 +1,24 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ include "hyperf.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "hyperf.fullname" . }}
+    helm.sh/chart: {{ include "hyperf.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`{{ .Values.traefikIngress.host }}`)
+      kind: Rule
+      services:
+        - name: {{ include "hyperf.fullname" . }}
+          port: {{ .Values.service.ports.http }}
+    - match: Host(`{{ .Values.traefikIngress.host }}`) && PathPrefix(`/socket.io/`)
+      kind: Rule
+      services:
+        - name: {{ include "hyperf.fullname" . }}
+          port: {{ .Values.service.ports.ws }}

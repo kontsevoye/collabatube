@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: "1.0"
+description: A Helm chart for Hyperf in Kubernetes
+name: collabatube
+version: 0.1.0
+dependencies:
+  - name: redis
+    version: "~11.1.0"
+    repository: "https://charts.bitnami.com/bitnami"
+  - name: mysql
+    version: "~6.14.10"
+    repository: "https://charts.bitnami.com/bitnami"

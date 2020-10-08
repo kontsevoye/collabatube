@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "hyperf.fullname" . }}-migration
+  labels:
+    name: {{ include "hyperf.fullname" . }}-migration
+    app.kubernetes.io/name: {{ include "hyperf.fullname" . }}
+    helm.sh/chart: {{ include "hyperf.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
+    "helm.sh/hook-weight": "-1"
+    "helm.sh/hook-delete-policy": hook-succeeded
+spec:
+  template:
+    metadata:
+      name: {{ include "hyperf.fullname" . }}-migration
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: db-migrations
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          envFrom:
+            - secretRef:
+                name: {{ template "hyperf.fullname" . }}-env
+          command:
+            - php
+            - bin/hyperf.php
+            - migrate

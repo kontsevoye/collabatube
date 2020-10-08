@@ -1,0 +1,108 @@
+# Default values for hyperf.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: ghcr.io/kontsevoye/collabatube
+  tag: latest
+  pullPolicy: Always
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  ports:
+    http: 9501
+    ws: 9502
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+## Configure extra options for liveness and readiness probes
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes)
+livenessProbe: {}
+#   httpGet:
+#     path: /liveness
+#     port: 9501
+#   initialDelaySeconds: 5
+#   periodSeconds: 5
+readinessProbe: {}
+#   httpGet:
+#     path: /readiness
+#     port: 9501
+#   initialDelaySeconds: 5
+#   periodSeconds: 5
+
+traefikIngress:
+  enable: true
+  host: collabatube.ru
+
+# https://github.com/bitnami/charts/tree/master/bitnami/redis#parameters
+redis:
+  cluster:
+    enabled: false
+    slaveCount: 1
+  global:
+    redis:
+      password: t00r
+
+# https://github.com/bitnami/charts/tree/master/bitnami/mysql#parameters
+mysql:
+  root:
+    forcePassword: true
+    password: t00r
+  db:
+    name: collabatube
+    forcePassword: true
+    user: hello
+    password: world
+  replication:
+    enabled: false
+  slave:
+    replicas: 1
+
+## .env
+envs:
+  app:
+    name: collabatube
+    env: prod
+    socketioServerUrl: wss://collabatube.ru:443
+  db:
+    driver: mysql
+    host: collabatube-mysql
+    port: '3306'
+    database: collabatube
+    username: hello
+    password: 'world'
+    charset: utf8mb4
+    collation: utf8mb4_unicode_ci
+    prefix: ''
+  redis:
+    host: collabatube-redis-master
+    auth: t00r
+    port: '6379'
+    db: '0'
+  auth:
+    jwtSecret: 'dDAwcnQwMHJ0MDBydDAwcnQwMHJ0MDBydDAwcnQwMHJ0MDBydDAwcnQwMHJ0MDBydDAwcnQwMHJ0MDBydDAwcg=='
+    oauthGithubClientId: fillit
+    oauthGithubClientSecret: fillit
+    oauthGoogleClientId: fillit
+    oauthGoogleClientSecret: fillit
