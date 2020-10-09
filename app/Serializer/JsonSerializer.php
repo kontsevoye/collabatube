@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace App\Serializer;
 
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+use Symfony\Component\Serializer\Normalizer\DateIntervalNormalizer;
+use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer as SymfonySerializer;
 
@@ -15,7 +18,13 @@ class JsonSerializer
     public function __construct()
     {
         $encoders = [new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
+        $normalizers = [
+            new ArrayDenormalizer(),
+            new ListDenormalizer(),
+            new DateTimeNormalizer(),
+            new DateIntervalNormalizer(),
+            new ObjectNormalizer(),
+        ];
 
         $this->serializer = new SymfonySerializer($normalizers, $encoders);
     }
@@ -31,9 +40,9 @@ class JsonSerializer
     /**
      * @return object object of $targetClass type
      */
-    public function deserialize(string $jsonContent, string $targetClass)
+    public function deserialize(string $jsonContent, string $targetClass, array $context = [])
     {
-        return $this->serializer->deserialize($jsonContent, $targetClass, JsonEncoder::FORMAT);
+        return $this->serializer->deserialize($jsonContent, $targetClass, JsonEncoder::FORMAT, $context);
     }
 
     /**

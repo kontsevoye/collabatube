@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Request;
 
 use App\Validator\ValidatorAwareInterface;
+use Hyperf\HttpMessage\Uri\Uri;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class PlaylistItem implements ValidatorAwareInterface
@@ -15,16 +16,9 @@ class PlaylistItem implements ValidatorAwareInterface
      */
     private string $url;
 
-    /**
-     * @var int video length in seconds
-     * @Assert\NotBlank
-     */
-    private int $length;
-
-    public function __construct(string $url = '', int $length = 0)
+    public function __construct(string $url = '')
     {
         $this->url = $url;
-        $this->length = $length;
     }
 
     public function getUrl(): string
@@ -32,8 +26,8 @@ class PlaylistItem implements ValidatorAwareInterface
         return $this->url;
     }
 
-    public function getLength(): int
+    public function getUri(): Uri
     {
-        return $this->length;
+        return new Uri($this->url);
     }
 }

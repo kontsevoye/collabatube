@@ -106,3 +106,5 @@ envs:
     oauthGithubClientSecret: fillit
     oauthGoogleClientId: fillit
     oauthGoogleClientSecret: fillit
+  youtube:
+    dataApiKey: fillit

@@ -17,3 +17,4 @@ requests.http
 .helm/Chart.lock
 !.helm/charts/.gitkeep
 .helm/values-production.yaml
+app/Command/TCommand.php

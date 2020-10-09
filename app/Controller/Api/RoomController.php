@@ -6,6 +6,7 @@ namespace App\Controller\Api;
 
 use App\Controller\AbstractController;
 use App\Exception\Validator\ValidatorException;
+use App\Exception\YoutubeClient\YoutubeClientException;
 use App\Http\Request\PlaylistItem as PlaylistItemRequest;
 use App\Http\Request\Room as RoomRequest;
 use App\Middleware\ApiAuthenticateMiddleware;
@@ -15,6 +16,7 @@ use App\PlaylistService\PlaylistItem;
 use App\PlaylistService\RoomPlaylistService;
 use App\Serializer\JsonSerializer;
 use App\Validator\AnnotationValidator;
+use App\YoutubeClient\Client;
 use Hyperf\Database\Model\ModelNotFoundException;
 use Hyperf\HttpMessage\Exception\UnauthorizedHttpException;
 use Hyperf\HttpServer\Annotation\Controller;
@@ -173,7 +175,8 @@ class RoomController extends AbstractController
     public function addPlaylistItem(
         int $id,
         RequestInterface $request,
-        ResponseInterface $response
+        ResponseInterface $response,
+        Client $ytClient
     ): PsrResponseInterface {
         try {
             $room = Room::findOrFail($id);
@@ -196,11 +199,22 @@ class RoomController extends AbstractController
                 ])
                 ->withStatus(400);
         }
+        try {
+            $info = $ytClient->getVideoInfo($playlistItemRequest->getUrl());
+        } catch (YoutubeClientException $e) {
+            return $response
+                ->json([
+                    'message' => $e->getMessage(),
+                ])
+                ->withStatus(400);
+        }
+        $pItem = PlaylistItem::fromVideoItem($info);
 
         return $response
             ->json([
                 'room' => $room->toArray(),
-                'length' => $this->playlistService->add($room, PlaylistItem::fromRequest($playlistItemRequest)),
+                'length' => $this->playlistService->add($room, $pItem),
+                'pItem' => $this->jsonSerializer->normalize($pItem)
             ])
             ->withStatus(200);
     }
