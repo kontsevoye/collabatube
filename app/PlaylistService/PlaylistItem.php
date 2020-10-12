@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\PlaylistService;
 
 use App\YoutubeClient\Response\VideoItem;
-use DateTimeImmutable;
 use DateInterval;
+use DateTimeImmutable;
 
 class PlaylistItem
 {
@@ -14,14 +14,23 @@ class PlaylistItem
      * @var string youtube video id, eg DhKIa4fHkrU
      */
     private string $id;
+
     private DateTimeImmutable $publishedAt;
+
     private string $channelId;
+
     private string $title;
+
     private string $description;
+
     private string $channelTitle;
+
     private string $thumbnailUrl;
+
     private int $thumbnailWidth;
+
     private int $thumbnailHeight;
+
     private DateInterval $duration;
 
     public function __construct(

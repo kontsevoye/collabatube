@@ -214,7 +214,7 @@ class RoomController extends AbstractController
             ->json([
                 'room' => $room->toArray(),
                 'length' => $this->playlistService->add($room, $pItem),
-                'pItem' => $this->jsonSerializer->normalize($pItem)
+                'pItem' => $this->jsonSerializer->normalize($pItem),
             ])
             ->withStatus(200);
     }

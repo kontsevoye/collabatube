@@ -55,6 +55,7 @@ abstract class AbstractAuthController extends AbstractController
         $sa = null;
         Db::transaction(function () use (&$sa, $ro) {
             try {
+                /** @var SocialAccount $sa */
                 $sa = SocialAccount::query()
                     ->where('type', $this->getSocialAccountType())
                     ->where('social_id', $ro->getId())

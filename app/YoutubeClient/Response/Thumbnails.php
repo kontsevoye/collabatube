@@ -1,13 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\YoutubeClient\Response;
 
 class Thumbnails
 {
     private Thumbnail $default;
+
     private Thumbnail $medium;
+
     private Thumbnail $high;
+
     private Thumbnail $standard;
+
     private Thumbnail $maxres;
 
     public function __construct(

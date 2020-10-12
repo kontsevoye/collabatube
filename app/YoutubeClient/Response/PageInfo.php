@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\YoutubeClient\Response;
 
 class PageInfo
 {
     private int $totalResults;
+
     private int $resultsPerPage;
 
     public function __construct(int $totalResults = 0, int $resultsPerPage = 0)

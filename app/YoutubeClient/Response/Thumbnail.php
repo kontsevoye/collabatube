@@ -1,11 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\YoutubeClient\Response;
 
 class Thumbnail
 {
     private string $url;
+
     private int $width;
+
     private int $height;
 
     public function __construct(string $url = '', int $width = 0, int $height = 0)

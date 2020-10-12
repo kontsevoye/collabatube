@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\YoutubeClient\Response;
 
 use DateTimeImmutable;
@@ -7,10 +9,15 @@ use DateTimeImmutable;
 class VideoItemSnippet
 {
     private DateTimeImmutable $publishedAt;
+
     private string $channelId;
+
     private string $title;
+
     private string $description;
+
     private string $channelTitle;
+
     private Thumbnails $thumbnails;
 
     public function __construct(

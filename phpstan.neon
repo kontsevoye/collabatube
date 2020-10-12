@@ -4,7 +4,15 @@
 # vendor/bin/phpstan analyse app --memory-limit 200M -l 0
 #
 parameters:
+  bootstrapFiles:
+    - config/constants.php
   reportUnmatchedIgnoredErrors: false
   ignoreErrors:
     - '#Static call to instance method Hyperf\\HttpServer\\Router\\Router::[a-zA-Z0-9\\_]+\(\)#'
     - '#Static call to instance method Hyperf\\DbConnection\\Db::[a-zA-Z0-9\\_]+\(\)#'
+    -
+      message: '#Access to an undefined property App\\Model\\[a-zA-Z0-9\\_]+::\$[a-zA-Z0-9\\_]+#'
+      path: app/Model/*
+    -
+      message: '#PHPDoc tag @property has invalid value \([a-zA-Z0-9\\_\|]+ [a-zA-Z0-9\\_]+\): Unexpected token "[a-zA-Z0-9\\_]+", expected variable at offset \d+#'
+      path: app/Model/*

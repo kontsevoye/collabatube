@@ -74,8 +74,9 @@
             "rm -rf runtime/container"
         ],
         "test": "co-phpunit -c phpunit.xml --colors=always",
+        "cs": "php-cs-fixer fix $1 --dry-run",
         "cs-fix": "php-cs-fixer fix $1",
-        "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./app ./config",
+        "analyse": "phpstan analyse --memory-limit 300M -l 5 -c phpstan.neon ./app ./config",
         "start": "php ./bin/hyperf.php start"
     }
 }

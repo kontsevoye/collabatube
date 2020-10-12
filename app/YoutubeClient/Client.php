@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\YoutubeClient;
 
 use App\Exception\YoutubeClient\VideoNotFoundException;
 use App\Exception\YoutubeClient\YoutubeClientException;
-use App\Serializer\ListDenormalizer;
 use App\Serializer\JsonSerializer;
+use App\Serializer\ListDenormalizer;
 use App\YoutubeClient\Response\VideoInfoResponse;
 use App\YoutubeClient\Response\VideoItem;
 use App\YoutubeClient\Response\VideoItemList;
@@ -19,7 +21,9 @@ use Symfony\Component\Serializer\Normalizer\DateIntervalNormalizer;
 class Client
 {
     private \GuzzleHttp\Client $client;
+
     private JsonSerializer $serializer;
+
     private string $apiKey;
 
     public function __construct(
@@ -31,33 +35,14 @@ class Client
     ) {
         $this->client = $clientFactory->create([
             'base_uri' => $baseUri,
-            'timeout'  => $timeout,
+            'timeout' => $timeout,
         ]);
         $this->serializer = $serializer;
         $this->apiKey = $config->get('youtube_data_api_key');
     }
 
-    private function parseVideoId(string $id): string
-    {
-        try {
-            new Uri($id);
-        } catch (\InvalidArgumentException $e) {
-            return $id;
-        }
-
-        $re = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)(?<id>[^"&?\/\s]{11})/i';
-        preg_match($re, $id, $matches);
-
-        if (!array_key_exists('id', $matches)) {
-            return $id;
-        }
-
-        return $matches['id'];
-    }
-
     /**
      * @param string $id Video id or url
-     * @return VideoItem
      * @throws VideoNotFoundException
      * @throws YoutubeClientException
      */
@@ -75,9 +60,8 @@ class Client
         } catch (BadResponseException $e) {
             if ($e->getCode() === 404) {
                 throw new VideoNotFoundException($e->getMessage(), $e->getCode(), $e);
-            } else {
-                throw new YoutubeClientException($e->getMessage(), $e->getCode(), $e);
             }
+            throw new YoutubeClientException($e->getMessage(), $e->getCode(), $e);
         } catch (\Throwable $e) {
             throw new YoutubeClientException($e->getMessage(), $e->getCode(), $e);
         }
@@ -101,5 +85,23 @@ class Client
         }
 
         return $videoInfo->getItemList()->getFirstItem();
+    }
+
+    private function parseVideoId(string $id): string
+    {
+        try {
+            new Uri($id);
+        } catch (\InvalidArgumentException $e) {
+            return $id;
+        }
+
+        $re = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)(?<id>[^"&?\/\s]{11})/i';
+        preg_match($re, $id, $matches);
+
+        if (! array_key_exists('id', $matches)) {
+            return $id;
+        }
+
+        return $matches['id'];
     }
 }

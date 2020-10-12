@@ -46,7 +46,7 @@ class JsonSerializer
     }
 
     /**
-     * @param object $data
+     * @param object|object[] $data object or array of objects for normalizing
      */
     public function normalize($data): array
     {

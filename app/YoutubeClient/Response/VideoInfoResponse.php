@@ -1,12 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\YoutubeClient\Response;
 
 class VideoInfoResponse
 {
     private string $kind;
+
     private string $etag;
+
     private VideoItemList $items;
+
     private PageInfo $pageInfo;
 
     public function __construct(

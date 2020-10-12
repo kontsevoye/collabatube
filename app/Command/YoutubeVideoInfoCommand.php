@@ -16,6 +16,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class YoutubeVideoInfoCommand extends HyperfCommand
 {
     private Client $client;
+
     private JsonSerializer $serializer;
 
     public function __construct(Client $client, JsonSerializer $serializer)

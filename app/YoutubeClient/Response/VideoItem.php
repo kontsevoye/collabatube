@@ -1,13 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\YoutubeClient\Response;
 
 class VideoItem
 {
     private string $kind;
+
     private string $etag;
+
     private string $id;
+
     private VideoItemSnippet $snippet;
+
     private VideoItemContentDetails $contentDetails;
 
     public function __construct(

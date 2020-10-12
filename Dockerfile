@@ -10,13 +10,15 @@ LABEL maintainer="Evgeny Kontsevoy <instane@ya.ru>" \
 ##
 # ---------- env settings ----------
 ##
-# --build-arg timezone=Europe/Moscow
-ARG timezone
+# --build-arg TIMEZONE=Europe/Moscow
+ARG TIMEZONE
+ARG WITH_DEV_DEPS
 
-ENV TIMEZONE=${timezone:-"Europe/Moscow"} \
+ENV TIMEZONE=${TIMEZONE:-"Europe/Moscow"} \
     COMPOSER_VERSION=1.10.10 \
     APP_ENV=prod \
-    SCAN_CACHEABLE=(true)
+    SCAN_CACHEABLE=(true) \
+    WITH_DEV_DEPS=${WITH_DEV_DEPS:-"false"}
 
 # update
 RUN set -ex \
@@ -52,7 +54,11 @@ WORKDIR /opt/www
 # RUN composer install --no-dev --no-scripts
 
 COPY . /opt/www
-RUN composer install --no-dev -o && php bin/hyperf.php
+RUN if [ "$WITH_DEV_DEPS" == "true" ]; \
+        then composer install --quiet --no-interaction; \
+        else composer install --quiet --no-interaction --no-dev -o; \
+    fi \
+    && php bin/hyperf.php
 
 EXPOSE 9501 9502
 
