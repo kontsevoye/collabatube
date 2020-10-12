@@ -1546,16 +1546,16 @@
         },
         {
             "name": "hyperf/http-message",
-            "version": "v2.0.11",
+            "version": "v2.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/http-message.git",
-                "reference": "f817201019898ee205f87f4d7e59623a35dd6e75"
+                "reference": "13e8ece7141c11ce1154b40136b2fd3b32285586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/http-message/zipball/f817201019898ee205f87f4d7e59623a35dd6e75",
-                "reference": "f817201019898ee205f87f4d7e59623a35dd6e75",
+                "url": "https://api.github.com/repos/hyperf/http-message/zipball/13e8ece7141c11ce1154b40136b2fd3b32285586",
+                "reference": "13e8ece7141c11ce1154b40136b2fd3b32285586",
                 "shasum": ""
             },
             "require": {
@@ -1594,7 +1594,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2020-09-07T10:26:15+00:00"
+            "time": "2020-10-04T10:27:39+00:00"
         },
         {
             "name": "hyperf/http-server",
@@ -6084,16 +6084,16 @@
         },
         {
             "name": "hyperf/testing",
-            "version": "v2.0.13",
+            "version": "v2.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/testing.git",
-                "reference": "a8aa1a38f09f9411ef6576c1ff4fc1c9b6a6c351"
+                "reference": "3dca89a86f65e2b2e997c6ee55df6439cfcc72e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/testing/zipball/a8aa1a38f09f9411ef6576c1ff4fc1c9b6a6c351",
-                "reference": "a8aa1a38f09f9411ef6576c1ff4fc1c9b6a6c351",
+                "url": "https://api.github.com/repos/hyperf/testing/zipball/3dca89a86f65e2b2e997c6ee55df6439cfcc72e5",
+                "reference": "3dca89a86f65e2b2e997c6ee55df6439cfcc72e5",
                 "shasum": ""
             },
             "require": {
@@ -6134,7 +6134,7 @@
                 "swoole",
                 "testing"
             ],
-            "time": "2020-09-23T02:31:52+00:00"
+            "time": "2020-10-10T09:22:32+00:00"
         },
         {
             "name": "mockery/mockery",
