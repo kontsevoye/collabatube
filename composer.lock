@@ -652,16 +652,16 @@
         },
         {
             "name": "hyperf-ext/auth",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-ext/auth.git",
-                "reference": "2e1cfd29a0590f2b48e5e6043acc42c39c80f652"
+                "reference": "8824bcff88090ab5db44e0daebfc2b5f5dc8adfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-ext/auth/zipball/2e1cfd29a0590f2b48e5e6043acc42c39c80f652",
-                "reference": "2e1cfd29a0590f2b48e5e6043acc42c39c80f652",
+                "url": "https://api.github.com/repos/hyperf-ext/auth/zipball/8824bcff88090ab5db44e0daebfc2b5f5dc8adfb",
+                "reference": "8824bcff88090ab5db44e0daebfc2b5f5dc8adfb",
                 "shasum": ""
             },
             "require": {
@@ -718,7 +718,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2020-09-12T22:34:28+00:00"
+            "time": "2020-10-21T04:57:04+00:00"
         },
         {
             "name": "hyperf-ext/hashing",
@@ -1081,16 +1081,16 @@
         },
         {
             "name": "hyperf/database",
-            "version": "v2.0.13",
+            "version": "v2.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/database.git",
-                "reference": "c07e4e691375ed8a3821542c332f8c56310c9663"
+                "reference": "c9a1bce30c8ac12246431dc7cd0f094d2afbabaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/database/zipball/c07e4e691375ed8a3821542c332f8c56310c9663",
-                "reference": "c07e4e691375ed8a3821542c332f8c56310c9663",
+                "url": "https://api.github.com/repos/hyperf/database/zipball/c9a1bce30c8ac12246431dc7cd0f094d2afbabaf",
+                "reference": "c9a1bce30c8ac12246431dc7cd0f094d2afbabaf",
                 "shasum": ""
             },
             "require": {
@@ -1133,7 +1133,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2020-09-23T02:31:52+00:00"
+            "time": "2020-10-02T00:13:20+00:00"
         },
         {
             "name": "hyperf/db-connection",
@@ -2186,16 +2186,16 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v2.0.13",
+            "version": "v2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "ffac695fc22fe3443fb9c7ba9398b03268e518e7"
+                "reference": "90af801eda4760dd58ba1bc54e630ed2e7ee1176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/ffac695fc22fe3443fb9c7ba9398b03268e518e7",
-                "reference": "ffac695fc22fe3443fb9c7ba9398b03268e518e7",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/90af801eda4760dd58ba1bc54e630ed2e7ee1176",
+                "reference": "90af801eda4760dd58ba1bc54e630ed2e7ee1176",
                 "shasum": ""
             },
             "require": {
@@ -2248,7 +2248,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2020-09-23T02:31:52+00:00"
+            "time": "2020-10-14T01:26:49+00:00"
         },
         {
             "name": "hyperf/websocket-server",
@@ -2766,16 +2766,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.40.1",
+            "version": "2.41.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d9a76d8b7eb0f97cf3a82529393245212f40ba3b"
+                "reference": "e148788eeae9b9b7b87996520358b86faad37b52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d9a76d8b7eb0f97cf3a82529393245212f40ba3b",
-                "reference": "d9a76d8b7eb0f97cf3a82529393245212f40ba3b",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e148788eeae9b9b7b87996520358b86faad37b52",
+                "reference": "e148788eeae9b9b7b87996520358b86faad37b52",
                 "shasum": ""
             },
             "require": {
@@ -2851,7 +2851,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-23T08:17:37+00:00"
+            "time": "2020-10-12T20:36:09+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -5273,7 +5273,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v5.1.6",
+            "version": "v5.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -5365,16 +5365,16 @@
         },
         {
             "name": "symfony/translation-contracts",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation-contracts.git",
-                "reference": "77ce1c3627c9f39643acd9af086631f842c50c4d"
+                "reference": "e2eaa60b558f26a4b0354e1bbb25636efaaad105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/77ce1c3627c9f39643acd9af086631f842c50c4d",
-                "reference": "77ce1c3627c9f39643acd9af086631f842c50c4d",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/e2eaa60b558f26a4b0354e1bbb25636efaaad105",
+                "reference": "e2eaa60b558f26a4b0354e1bbb25636efaaad105",
                 "shasum": ""
             },
             "require": {
@@ -5386,7 +5386,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -5436,7 +5436,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-07T11:33:47+00:00"
+            "time": "2020-09-28T13:05:58+00:00"
         },
         {
             "name": "symfony/validator",
