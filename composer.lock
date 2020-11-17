@@ -1259,16 +1259,16 @@
         },
         {
             "name": "hyperf/dispatcher",
-            "version": "v2.0.10",
+            "version": "v2.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/dispatcher.git",
-                "reference": "cba2e31a835ac5c904d149f170ee7a71a0699b3a"
+                "reference": "54471d121a9fe2378377d9b5b7a97642d663625a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/dispatcher/zipball/cba2e31a835ac5c904d149f170ee7a71a0699b3a",
-                "reference": "cba2e31a835ac5c904d149f170ee7a71a0699b3a",
+                "url": "https://api.github.com/repos/hyperf/dispatcher/zipball/54471d121a9fe2378377d9b5b7a97642d663625a",
+                "reference": "54471d121a9fe2378377d9b5b7a97642d663625a",
                 "shasum": ""
             },
             "require": {
@@ -1312,7 +1312,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2020-08-31T06:51:22+00:00"
+            "time": "2020-11-17T02:20:34+00:00"
         },
         {
             "name": "hyperf/event",
@@ -1547,16 +1547,16 @@
         },
         {
             "name": "hyperf/http-message",
-            "version": "v2.0.14",
+            "version": "v2.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/http-message.git",
-                "reference": "13e8ece7141c11ce1154b40136b2fd3b32285586"
+                "reference": "4cedd1a31426f13e4020cbddd9d1b4556be71e1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/http-message/zipball/13e8ece7141c11ce1154b40136b2fd3b32285586",
-                "reference": "13e8ece7141c11ce1154b40136b2fd3b32285586",
+                "url": "https://api.github.com/repos/hyperf/http-message/zipball/4cedd1a31426f13e4020cbddd9d1b4556be71e1b",
+                "reference": "4cedd1a31426f13e4020cbddd9d1b4556be71e1b",
                 "shasum": ""
             },
             "require": {
@@ -1595,20 +1595,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2020-10-04T10:27:39+00:00"
+            "time": "2020-11-13T07:09:11+00:00"
         },
         {
             "name": "hyperf/http-server",
-            "version": "v2.0.13",
+            "version": "v2.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/http-server.git",
-                "reference": "c124282e53bf0dfd9528e8f44f777d220b7ec9b3"
+                "reference": "49b701e1f20bf2103cf33a9f1e860ad595d41c74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/http-server/zipball/c124282e53bf0dfd9528e8f44f777d220b7ec9b3",
-                "reference": "c124282e53bf0dfd9528e8f44f777d220b7ec9b3",
+                "url": "https://api.github.com/repos/hyperf/http-server/zipball/49b701e1f20bf2103cf33a9f1e860ad595d41c74",
+                "reference": "49b701e1f20bf2103cf33a9f1e860ad595d41c74",
                 "shasum": ""
             },
             "require": {
@@ -1660,7 +1660,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2020-09-23T02:31:52+00:00"
+            "time": "2020-11-13T07:09:11+00:00"
         },
         {
             "name": "hyperf/logger",
@@ -2187,16 +2187,16 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v2.0.15",
+            "version": "v2.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "90af801eda4760dd58ba1bc54e630ed2e7ee1176"
+                "reference": "0619fe0ccc2101f796f2252d8d2312b47939c30e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/90af801eda4760dd58ba1bc54e630ed2e7ee1176",
-                "reference": "90af801eda4760dd58ba1bc54e630ed2e7ee1176",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/0619fe0ccc2101f796f2252d8d2312b47939c30e",
+                "reference": "0619fe0ccc2101f796f2252d8d2312b47939c30e",
                 "shasum": ""
             },
             "require": {
@@ -2249,7 +2249,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2020-10-14T01:26:49+00:00"
+            "time": "2020-11-05T04:42:11+00:00"
         },
         {
             "name": "hyperf/websocket-server",
