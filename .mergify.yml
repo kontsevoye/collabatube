@@ -1,0 +1,10 @@
+pull_request_rules:
+  - name: automatic merge from dependabot
+    conditions:
+      - author=dependabot[bot]
+      - check-success=PHPStan
+      - check-success=PHP-CS-Fixer
+      - base=master
+    actions:
+      merge:
+        method: squash
