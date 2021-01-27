@@ -1542,16 +1542,16 @@
         },
         {
             "name": "hyperf/http-message",
-            "version": "v2.0.19",
+            "version": "v2.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/http-message.git",
-                "reference": "4cedd1a31426f13e4020cbddd9d1b4556be71e1b"
+                "reference": "8a8dbf876e541e087db1870a7b91e7cd624a3671"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/http-message/zipball/4cedd1a31426f13e4020cbddd9d1b4556be71e1b",
-                "reference": "4cedd1a31426f13e4020cbddd9d1b4556be71e1b",
+                "url": "https://api.github.com/repos/hyperf/http-message/zipball/8a8dbf876e541e087db1870a7b91e7cd624a3671",
+                "reference": "8a8dbf876e541e087db1870a7b91e7cd624a3671",
                 "shasum": ""
             },
             "require": {
@@ -1590,20 +1590,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2020-11-13T07:09:11+00:00"
+            "time": "2020-12-15T12:35:28+00:00"
         },
         {
             "name": "hyperf/http-server",
-            "version": "v2.0.19",
+            "version": "v2.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/http-server.git",
-                "reference": "49b701e1f20bf2103cf33a9f1e860ad595d41c74"
+                "reference": "a24e12522e8b9678e53ab678a00ba82c1dd123ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/http-server/zipball/49b701e1f20bf2103cf33a9f1e860ad595d41c74",
-                "reference": "49b701e1f20bf2103cf33a9f1e860ad595d41c74",
+                "url": "https://api.github.com/repos/hyperf/http-server/zipball/a24e12522e8b9678e53ab678a00ba82c1dd123ac",
+                "reference": "a24e12522e8b9678e53ab678a00ba82c1dd123ac",
                 "shasum": ""
             },
             "require": {
@@ -1655,7 +1655,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2020-11-13T07:09:11+00:00"
+            "time": "2020-12-15T12:35:28+00:00"
         },
         {
             "name": "hyperf/logger",
@@ -2059,16 +2059,16 @@
         },
         {
             "name": "hyperf/server",
-            "version": "v2.0.13",
+            "version": "v2.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/server.git",
-                "reference": "2597dc953d98f3bcdcbf47904e3c3c4a71e172f2"
+                "reference": "40740e520faa1930447e9899ce9826dfd9dbae86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/server/zipball/2597dc953d98f3bcdcbf47904e3c3c4a71e172f2",
-                "reference": "2597dc953d98f3bcdcbf47904e3c3c4a71e172f2",
+                "url": "https://api.github.com/repos/hyperf/server/zipball/40740e520faa1930447e9899ce9826dfd9dbae86",
+                "reference": "40740e520faa1930447e9899ce9826dfd9dbae86",
                 "shasum": ""
             },
             "require": {
@@ -2116,7 +2116,7 @@
                 "server",
                 "swoole"
             ],
-            "time": "2020-09-27T08:25:56+00:00"
+            "time": "2020-12-16T07:13:26+00:00"
         },
         {
             "name": "hyperf/socketio-server",
@@ -2405,16 +2405,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "b9d84eaa39fde733356ea948cdef36c631f202b6"
+                "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/b9d84eaa39fde733356ea948cdef36c631f202b6",
-                "reference": "b9d84eaa39fde733356ea948cdef36c631f202b6",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
+                "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
                 "shasum": ""
             },
             "require": {
@@ -2427,15 +2427,9 @@
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
                 "phpbench/phpbench": "^0.17.1",
-                "phpunit/phpunit": "^9.3.7"
+                "phpunit/phpunit": "~9.3.7"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev",
-                    "dev-develop": "3.4.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Laminas\\Stdlib\\": "src/"
@@ -2457,7 +2451,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-08-25T09:08:16+00:00"
+            "time": "2020-11-19T20:18:59+00:00"
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
@@ -7543,6 +7537,71 @@
                 }
             ],
             "time": "2021-01-27T12:56:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php70",
+            "version": "v1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/5f03a781d984aae42cebd18e7912fa80f02ee644",
+                "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.20-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-23T14:02:19+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
