@@ -1998,16 +1998,16 @@
         },
         {
             "name": "hyperf/redis",
-            "version": "v2.0.13",
+            "version": "v2.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/redis.git",
-                "reference": "a9177dad196dd7f44ee38e12b3e95b72bbbe12d8"
+                "reference": "8bc8ce34f18eacb4ecc47170a1ef5d88af6f9a35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/redis/zipball/a9177dad196dd7f44ee38e12b3e95b72bbbe12d8",
-                "reference": "a9177dad196dd7f44ee38e12b3e95b72bbbe12d8",
+                "url": "https://api.github.com/repos/hyperf/redis/zipball/8bc8ce34f18eacb4ecc47170a1ef5d88af6f9a35",
+                "reference": "8bc8ce34f18eacb4ecc47170a1ef5d88af6f9a35",
                 "shasum": ""
             },
             "require": {
@@ -2026,6 +2026,7 @@
                 "phpunit/phpunit": "^7.0.0"
             },
             "suggest": {
+                "ext-redis": "Required to use sentinel mode (>=5.2).",
                 "hyperf/di": "Create the RedisPool via dependency injection."
             },
             "type": "library",
@@ -2054,7 +2055,7 @@
                 "pool",
                 "redis"
             ],
-            "time": "2020-09-24T12:45:35+00:00"
+            "time": "2020-11-06T07:50:08+00:00"
         },
         {
             "name": "hyperf/server",
@@ -2119,16 +2120,16 @@
         },
         {
             "name": "hyperf/socketio-server",
-            "version": "v2.0.13",
+            "version": "v2.0.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/socketio-server.git",
-                "reference": "100cd8279c99044f68793a19ceefa358bf9ac83b"
+                "reference": "b48f1bffa2ad6d41427a5ebea08239f39df14a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/socketio-server/zipball/100cd8279c99044f68793a19ceefa358bf9ac83b",
-                "reference": "100cd8279c99044f68793a19ceefa358bf9ac83b",
+                "url": "https://api.github.com/repos/hyperf/socketio-server/zipball/b48f1bffa2ad6d41427a5ebea08239f39df14a88",
+                "reference": "b48f1bffa2ad6d41427a5ebea08239f39df14a88",
                 "shasum": ""
             },
             "require": {
@@ -2178,20 +2179,20 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2020-09-22T01:38:36+00:00"
+            "time": "2020-12-29T02:30:38+00:00"
         },
         {
             "name": "hyperf/utils",
-            "version": "v2.0.18",
+            "version": "v2.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "0619fe0ccc2101f796f2252d8d2312b47939c30e"
+                "reference": "df57be679fc64eb871eeab6e8685e3142fc7a9b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/0619fe0ccc2101f796f2252d8d2312b47939c30e",
-                "reference": "0619fe0ccc2101f796f2252d8d2312b47939c30e",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/df57be679fc64eb871eeab6e8685e3142fc7a9b4",
+                "reference": "df57be679fc64eb871eeab6e8685e3142fc7a9b4",
                 "shasum": ""
             },
             "require": {
@@ -2244,20 +2245,20 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2020-11-05T04:42:11+00:00"
+            "time": "2021-01-08T05:04:56+00:00"
         },
         {
             "name": "hyperf/websocket-server",
-            "version": "v2.0.13",
+            "version": "v2.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/websocket-server.git",
-                "reference": "d73d89c5b2cfc5b283eedd29895052c634d0f11a"
+                "reference": "e9adfb72c0cab02e2dc431105737c6e9904bd9fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/websocket-server/zipball/d73d89c5b2cfc5b283eedd29895052c634d0f11a",
-                "reference": "d73d89c5b2cfc5b283eedd29895052c634d0f11a",
+                "url": "https://api.github.com/repos/hyperf/websocket-server/zipball/e9adfb72c0cab02e2dc431105737c6e9904bd9fc",
+                "reference": "e9adfb72c0cab02e2dc431105737c6e9904bd9fc",
                 "shasum": ""
             },
             "require": {
@@ -2302,7 +2303,7 @@
                 "swoole",
                 "websocket"
             ],
-            "time": "2020-09-23T02:31:52+00:00"
+            "time": "2020-12-03T06:01:53+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
@@ -2578,70 +2579,25 @@
             "time": "2020-08-20T13:22:28+00:00"
         },
         {
-            "name": "mix/concurrent",
-            "version": "v2.2.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mix-php/concurrent.git",
-                "reference": "2ad4741825a82d896e7ed69e6e8721ca9979c05a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mix-php/concurrent/zipball/2ad4741825a82d896e7ed69e6e8721ca9979c05a",
-                "reference": "2ad4741825a82d896e7ed69e6e8721ca9979c05a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-swoole": ">=4.4.4",
-                "php": ">=7.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mix\\Concurrent\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "liu,jian",
-                    "email": "coder.keda@gmail.com"
-                }
-            ],
-            "description": "Coroutine concurrency library based on Swoole",
-            "homepage": "https://openmix.org/",
-            "keywords": [
-                "concurrent",
-                "coroutine",
-                "mix",
-                "swoole"
-            ],
-            "time": "2020-09-14T02:39:06+00:00"
-        },
-        {
             "name": "mix/redis-subscribe",
-            "version": "v2.2.14",
+            "version": "v2.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mix-php/redis-subscribe.git",
-                "reference": "ae9d34f1cf8362398e3be31065c4fa418c26153d"
+                "reference": "85ac4516791e584f3cebee6e4ae2383067bd1517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mix-php/redis-subscribe/zipball/ae9d34f1cf8362398e3be31065c4fa418c26153d",
-                "reference": "ae9d34f1cf8362398e3be31065c4fa418c26153d",
+                "url": "https://api.github.com/repos/mix-php/redis-subscribe/zipball/85ac4516791e584f3cebee6e4ae2383067bd1517",
+                "reference": "85ac4516791e584f3cebee6e4ae2383067bd1517",
                 "shasum": ""
             },
             "require": {
                 "ext-swoole": ">=4.4.4",
-                "mix/concurrent": "~2.2.0",
                 "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0.0"
             },
             "type": "library",
             "autoload": {
@@ -2667,7 +2623,7 @@
                 "subscribe",
                 "swoole"
             ],
-            "time": "2020-09-14T02:39:06+00:00"
+            "time": "2020-10-26T09:06:52+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3664,26 +3620,26 @@
         },
         {
             "name": "roave/signature",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/Signature.git",
-                "reference": "bbbcc317dfe3a750e27231c5d2130153aa4c41b3"
+                "reference": "5b5bb9499cfbcc78d9f472e03af1e97e4341ec7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/Signature/zipball/bbbcc317dfe3a750e27231c5d2130153aa4c41b3",
-                "reference": "bbbcc317dfe3a750e27231c5d2130153aa4c41b3",
+                "url": "https://api.github.com/repos/Roave/Signature/zipball/5b5bb9499cfbcc78d9f472e03af1e97e4341ec7c",
+                "reference": "5b5bb9499cfbcc78d9f472e03af1e97e4341ec7c",
                 "shasum": ""
             },
             "require": {
-                "php": "7.4.*"
+                "php": "7.4.*|8.0.*"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^8.1",
-                "infection/infection": "^0.17.5",
-                "phpunit/phpunit": "^9.3",
-                "vimeo/psalm": "^3.16"
+                "doctrine/coding-standard": "^8.2",
+                "infection/infection": "^0.20.2",
+                "phpunit/phpunit": "^9.5.1",
+                "vimeo/psalm": "^4.4"
             },
             "type": "library",
             "autoload": {
@@ -3696,7 +3652,7 @@
                 "MIT"
             ],
             "description": "Sign and verify stuff",
-            "time": "2020-10-01T08:35:57+00:00"
+            "time": "2021-01-25T09:39:37+00:00"
         },
         {
             "name": "symfony/cache",
@@ -4018,16 +3974,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.2.1",
+            "version": "v5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "0b9231a5922fd7287ba5b411893c0ecd2733e5ba"
+                "reference": "196f45723b5e618bf0e23b97e96d11652696ea9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/0b9231a5922fd7287ba5b411893c0ecd2733e5ba",
-                "reference": "0b9231a5922fd7287ba5b411893c0ecd2733e5ba",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/196f45723b5e618bf0e23b97e96d11652696ea9e",
+                "reference": "196f45723b5e618bf0e23b97e96d11652696ea9e",
                 "shasum": ""
             },
             "require": {
@@ -4056,7 +4012,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony Finder Component",
+            "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "funding": [
                 {
@@ -4072,7 +4028,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-08T17:02:38+00:00"
+            "time": "2021-01-27T10:01:46+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
