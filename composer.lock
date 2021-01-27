@@ -908,16 +908,16 @@
         },
         {
             "name": "hyperf/command",
-            "version": "v2.0.10",
+            "version": "v2.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/command.git",
-                "reference": "3c9e632a2f4e780e38bc14c83feb7bb3d1da5473"
+                "reference": "f350d74d829c778f76a416a25ed487fbe30ad7de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/command/zipball/3c9e632a2f4e780e38bc14c83feb7bb3d1da5473",
-                "reference": "3c9e632a2f4e780e38bc14c83feb7bb3d1da5473",
+                "url": "https://api.github.com/repos/hyperf/command/zipball/f350d74d829c778f76a416a25ed487fbe30ad7de",
+                "reference": "f350d74d829c778f76a416a25ed487fbe30ad7de",
                 "shasum": ""
             },
             "require": {
@@ -956,7 +956,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2020-09-03T09:27:40+00:00"
+            "time": "2020-12-10T09:09:22+00:00"
         },
         {
             "name": "hyperf/config",
