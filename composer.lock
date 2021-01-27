@@ -5602,12 +5602,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -7331,16 +7331,16 @@
         },
         {
             "name": "swoole/ide-helper",
-            "version": "4.5.6",
+            "version": "4.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoole/ide-helper.git",
-                "reference": "ab23c2c35880144a6060a3f178a68af0d0c6fc93"
+                "reference": "62d923e3406d4d9c5a4749d810d11e2beb201abe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/ab23c2c35880144a6060a3f178a68af0d0c6fc93",
-                "reference": "ab23c2c35880144a6060a3f178a68af0d0c6fc93",
+                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/62d923e3406d4d9c5a4749d810d11e2beb201abe",
+                "reference": "62d923e3406d4d9c5a4749d810d11e2beb201abe",
                 "shasum": ""
             },
             "require-dev": {
@@ -7361,7 +7361,7 @@
                 }
             ],
             "description": "IDE help files for Swoole.",
-            "time": "2020-10-27T16:11:26+00:00"
+            "time": "2021-01-26T00:17:29+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
